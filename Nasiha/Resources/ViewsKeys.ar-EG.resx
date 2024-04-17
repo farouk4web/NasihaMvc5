@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>عنا</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>نصيحة</value>
+  </data>
+  <data name="AppNameCom" xml:space="preserve">
+    <value>Nasiha.com</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغيير كلمة السر</value>
+  </data>
+  <data name="ChangePictureSuccessMsg" xml:space="preserve">
+    <value>تم تحديث الصورة الشخصية بنجاح</value>
+  </data>
+  <data name="ChangeProfilePicture" xml:space="preserve">
+    <value>تغيير الصورة الشخصية</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تأكييد كلمة السر</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="EditPersonalInformation" xml:space="preserve">
+    <value>تعديل المعلومات الشخصية</value>
+  </data>
+  <data name="EditPersonalInformationSuccessMsg" xml:space="preserve">
+    <value>تم تحديث معلوماتك بنجاح</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>نسيت كلمة السر</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>الاسم </value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Liked" xml:space="preserve">
+    <value>مفضلة</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>إدارة</value>
+  </data>
+  <data name="ManageMsg" xml:space="preserve">
+    <value>هنا يمكنك تغيير اعدادات حسابك</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>نصيحة</value>
+  </data>
+  <data name="AdvicePlaceholder" xml:space="preserve">
+    <value>اترك نصيحتك هنا</value>
+  </data>
+  <data name="NasihaTeam" xml:space="preserve">
+    <value>فريق نصيحة</value>
+  </data>
+  <data name="NewAdvice" xml:space="preserve">
+    <value>نصيحة ل</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة سر جديدة</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="NoAdvices1" xml:space="preserve">
+    <value>لا يوجد اي نصيحة ارسلت إليك من قبل</value>
+  </data>
+  <data name="NoAdvices2" xml:space="preserve">
+    <value>حاول مشاركة حسابك علي مواقع التواصل وانتظر النصائح</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>كلمة السر القديمة</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة السر</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>المعلومات الشخصية</value>
+  </data>
+  <data name="Pinned" xml:space="preserve">
+    <value>مثبتة</value>
+  </data>
+  <data name="ProfilePicture" xml:space="preserve">
+    <value>صورة الحساب</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>تسجيل جديد</value>
+  </data>
+  <data name="RegisterAsNew" xml:space="preserve">
+    <value>سجل حساب جديد</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكرني</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="RemoveAccount" xml:space="preserve">
+    <value>حذف الحساب</value>
+  </data>
+  <data name="RemoveAdviceWarning" xml:space="preserve">
+    <value>هل انت متأكد انك تريد حذف هذه النصيحة</value>
+  </data>
+  <data name="RemoveUserdangerMsg" xml:space="preserve">
+    <value>تذكر: إذا حذفت حسابك لن تستطيع استرجاع حسابك او النصائح مرة اخري</value>
+  </data>
+  <data name="RemoveUserSorryMsg" xml:space="preserve">
+    <value>نحن اسفون لرؤيتك ترحل ):</value>
+  </data>
+  <data name="RemoveUserWarningMsg" xml:space="preserve">
+    <value>هل انت واثق انك تريد ان تحذف حسابك للأبد</value>
+  </data>
+  <data name="Reseved" xml:space="preserve">
+    <value>المستلمة</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="Sittings" xml:space="preserve">
+    <value>الاعدادات</value>
+  </data>
+  <data name="SuccessChangePasswordMsg" xml:space="preserve">
+    <value>تم تحديث كلمة السر خاصتك بنجاح</value>
+  </data>
+  <data name="UserMsgsCountNotice" xml:space="preserve">
+    <value>نصيحة ارسلت لهذا المستخدم منذ ان سجل في الموقع</value>
+  </data>
+  <data name="WarningMsg" xml:space="preserve">
+    <value>رسالة خطأ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>نتيجة البحث</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>اسف</value>
+  </data>
+  <data name="SorryMsg" xml:space="preserve">
+    <value>عذرآ لا يمكنك ارسال "النصائح" الي نفسك إذا ردت افعلها في الواقع</value>
+  </data>
+  <data name="ThankU" xml:space="preserve">
+    <value>شكرآ لك</value>
+  </data>
+  <data name="ThankUMsg" xml:space="preserve">
+    <value>شكرآ لك علي اخلاقك الحميدة, كن متأكدآ ان "نصيحتك" ستغير هذا الشخص للأفضل</value>
+  </data>
+  <data name="NoUsersFoundedMsg" xml:space="preserve">
+    <value>عذرآ, لم نجد اي مستخدم يتطابق مع بحثك حاول مرة اخري</value>
+  </data>
+  <data name="WarningSearchQuery" xml:space="preserve">
+    <value>عليك ان تكتب حرف واحد علي الاقل</value>
+  </data>
+  <data name="AddToAdmins" xml:space="preserve">
+    <value>أضف للمديرين</value>
+  </data>
+  <data name="RemoveFromAdmins" xml:space="preserve">
+    <value>إزالة من  المديرين</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>المستخدمين</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>المسؤلون</value>
+  </data>
+  <data name="ForgotPasswordConfirmationMsg" xml:space="preserve">
+    <value>رجاءآ افحص بريدك الالكتروني لتغيير كلمة السر</value>
+  </data>
+  <data name="ClickHereToLogin" xml:space="preserve">
+    <value>اضغط هنا لتسجيل الدخول</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value>تأكيد "نسيت كلمة السر" </value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>إعادة تعيين كلمة السر</value>
+  </data>
+  <data name="ResetPasswordConfirmation" xml:space="preserve">
+    <value>تأكييد إعادة تعيين كلمة السر</value>
+  </data>
+  <data name="ResetPasswordSuccessConfirmation" xml:space="preserve">
+    <value>تم اعادة تعيين كلمة السر خاصتك بنجاح</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>تأكييد البريد الالكتروني</value>
+  </data>
+  <data name="ConfirmEmailSuccessMsg" xml:space="preserve">
+    <value>شكرآ علي تأكييد حسابك, بريدك الالكتروني اؤكد بنجاح,  رجاءآ</value>
+  </data>
+  <data name="HaveAccount" xml:space="preserve">
+    <value>لديك حساب؟ دخول</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>بواسطة</value>
+  </data>
+  <data name="DeveloperCopyrights" xml:space="preserve">
+    <value>صمم وطور بكل</value>
+  </data>
+  <data name="AboutMsg" xml:space="preserve">
+    <value>موقع نصيحة, ببساطة ما هو إلا وسيلة لجعل الاشخاص يقدمون النصائح دون ان يشعروا الطرف الاخر بنقص او اي شئ من هذا القبيل </value>
+  </data>
+  <data name="AboutMsg2" xml:space="preserve">
+    <value>وأيضآ هناك الكثير والكثير ممن يريدون طلب النصيحة ولكن لا يفعلون ظنآ منهم ان ذلك سيجعل الشخص الذي يسألة افضل منه وهذا فهم خاطئ منه وموقعنا جاء ليساعد في تصحيح هذه المفاهيم الخاطئة ويساعد هؤلاء الناس وهذه هي رؤيتنا</value>
+  </data>
+  <data name="ContactMsg" xml:space="preserve">
+    <value>مرحبآ بك, نود إخبارك ان لدينا فريق كامل ومجهز للرد علي استفساراتكم عبر مواقع التواصل الاجتماعي</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>فيسبوك</value>
+  </data>
+  <data name="Hi" xml:space="preserve">
+    <value>مرحبآ</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>إنستجرام</value>
+  </data>
+  <data name="Smile" xml:space="preserve">
+    <value>اضحك للدنيا تضحكلك</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>تويتر</value>
+  </data>
+  <data name="Youtube" xml:space="preserve">
+    <value>يوتيوب</value>
+  </data>
+  <data name="IntroMsg" xml:space="preserve">
+    <value>"نصيحة" هو المكان الافضل لمشاركة نصيحتك مع اصدقائك او اي احد</value>
+  </data>
+  <data name="ContactMsg2" xml:space="preserve">
+    <value>ارسل طلبك وسيتم التواصل معك مباشرة </value>
+  </data>
+  <data name="BackToMessages" xml:space="preserve">
+    <value>العودة الي النصائح</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>انطلق</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>لقد وجدنا خطأ ما اثناء معالجة طلبك ونحن في طريقنا لحله</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>فاروق عبد الحميد</value>
+  </data>
+  <data name="RemoveUserByAdminMsg" xml:space="preserve">
+    <value>هل انت متأكد انك تريد حذف هذا المستخدم نهائيآ, تذكر انك لن تستطيع استرجاع الحساب او النصائح الخاصة به,  كن حذرآ</value>
+  </data>
+  <data name="AboutNasiha" xml:space="preserve">
+    <value>عن نصيحة</value>
+  </data>
+  <data name="WhoUs" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="Advices" xml:space="preserve">
+    <value>النصائح</value>
+  </data>
+  <data name="PleaseConfirmMsg" xml:space="preserve">
+    <value>رجاءآ قم بتأكييد بريدك الالكتروني لتكون قادرآ في المستقبل علي إعادة تعيين كلمة السر اذا نسيتها, فقط اذهب الي بريدك الالكتروني واضغط علي زر التأكييد</value>
+  </data>
+  <data name="Confirmed" xml:space="preserve">
+    <value>البريد مؤكد</value>
+  </data>
+  <data name="NotConfirmed" xml:space="preserve">
+    <value>البريد غير مؤكد</value>
+  </data>
+  <data name="AddOwner" xml:space="preserve">
+    <value>اضف ك مالك</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>مالك الموقع</value>
+  </data>
+  <data name="RemoveOwner" xml:space="preserve">
+    <value>حذف المالك</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>المستخدمين المتصلين</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="NoAdvicesOnSite" xml:space="preserve">
+    <value>لا يوجد اي نصيحة في الموقع حتي الان</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>غير متوفر</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>إلي</value>
+  </data>
+  <data name="Ad" xml:space="preserve">
+    <value>إعلان</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>مسئول</value>
+  </data>
+  <data name="Advice" xml:space="preserve">
+    <value>نصيحة</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>لوحة التحكم الرئيسية</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>مستخدم</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>القائمة</value>
+  </data>
+  <data name="NewAd" xml:space="preserve">
+    <value>إعلان جديد</value>
+  </data>
+  <data name="NewPlace" xml:space="preserve">
+    <value>مكان اعلان جديد</value>
+  </data>
+  <data name="NoAdsPlacesYetMsg" xml:space="preserve">
+    <value>عذرآ لم نجد اي مكان إعلانات</value>
+  </data>
+  <data name="NoAdsMsg" xml:space="preserve">
+    <value>لا يوجد اي إعلان في موقعنا حتي الان</value>
+  </data>
+  <data name="UpdateAd" xml:space="preserve">
+    <value>تحديث الاعلان</value>
+  </data>
+  <data name="PreviewOfCurrentAd" xml:space="preserve">
+    <value>معاينة الاعلان الحالي</value>
+  </data>
+  <data name="ThisAdOnThisPlace" xml:space="preserve">
+    <value>هذا الاعلان في المكان التالي</value>
+  </data>
+  <data name="loveIt" xml:space="preserve">
+    <value>افضلها</value>
+  </data>
+  <data name="OurAdvantages" xml:space="preserve">
+    <value>مزايانا</value>
+  </data>
+  <data name="pinIt" xml:space="preserve">
+    <value>ثبتها</value>
+  </data>
+  <data name="SearchResultZero1" xml:space="preserve">
+    <value>للأسف لم نجد اي مستحدم يحمل هذا الاسم , جرب إسمآ اخر</value>
+  </data>
+  <data name="SearchResultZero2" xml:space="preserve">
+    <value>لا تحزن معآ نستطيع إيجاده</value>
+  </data>
+  <data name="Langauge" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="Tiktok" xml:space="preserve">
+    <value>تيك توك</value>
+  </data>
+  <data name="Whatsapp" xml:space="preserve">
+    <value>واتس اب</value>
+  </data>
+  <data name="SentIn" xml:space="preserve">
+    <value>ارسلت في</value>
+  </data>
+  <data name="siteDescription" xml:space="preserve">
+    <value>المكان الافضل لطلب النصائح من الاصدقاء بدون معرفة هويتهم</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>حذف المستخدم نهائيآ</value>
+  </data>
+  <data name="RemoveUserNote" xml:space="preserve">
+    <value>يمكنك حذف هذا الحساب نهائيا وسيتم حذف كل النضائح المرتبطة به ايضا</value>
+  </data>
+  <data name="UserAdvices" xml:space="preserve">
+    <value>نصائح المستخدم</value>
+  </data>
+  <data name="ForAdminsOnlay" xml:space="preserve">
+    <value>هذا الجزء يظهر للمديرين فقط</value>
+  </data>
+</root>

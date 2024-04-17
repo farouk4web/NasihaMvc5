@@ -1,0 +1,27 @@
+﻿@using Nasiha.Resources
+
+@model IEnumerable<Nasiha.Models.ApplicationUser>
+@{
+    ViewBag.Title = ViewsKeys.Users;
+}
+
+<div class="users">
+    <h2><i class="fa fa-group"></i> &nbsp; @ViewsKeys.Users</h2>
+    <h3>@Model.Count() @ViewsKeys.User</h3>
+
+    <div class="row">
+        @foreach (var user in Model)
+        {
+            <div class="col-sm-4">
+                <div class="user text-center">
+                    <a href="/@user.Nickname">
+                        <img src="@user.ProfileImageSrc" alt="@user.Nickname" class="userPicture img-circle" />
+                    </a>
+                    <h4 class="text-capitalize"><a href="/@user.Nickname">@user.FullName</a></h4>
+                    <h4>@user.Nickname</h4>
+                    <b>@user.Advices.Count() @ViewsKeys.Advices</b>
+                </div>
+            </div>
+        }
+    </div>
+</div>

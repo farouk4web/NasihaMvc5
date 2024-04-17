@@ -1,0 +1,38 @@
+﻿@using Nasiha.Resources
+
+@model IEnumerable<Nasiha.Models.ApplicationUser>
+@{
+    ViewBag.Title = ViewsKeys.Search;
+}
+
+<div class="searchResult text-center">
+    <div class="container">
+
+        <div class="row">
+            @if (Model.Count() == 0)
+            {
+                <p class="lead">
+                    @ViewsKeys.SearchResultZero1
+                    <br />
+                    <i class="fa fa-frown-o fa-4x"></i>
+                    <br />
+                    @ViewsKeys.SearchResultZero2
+                </p>
+            }
+
+            @foreach (var user in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="user text-center">
+                        <a href="/@user.Nickname">
+                            <img src="@user.ProfileImageSrc" alt="@user.Nickname" class="userPicture img-circle" />
+                        </a>
+                        <h4 class="text-capitalize"><a href="/@user.Nickname">@user.FullName</a></h4>
+                        <b>@user.Advices.Count() @ViewsKeys.Advices</b>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

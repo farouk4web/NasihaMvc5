@@ -1,0 +1,40 @@
+﻿@using Nasiha.Resources
+
+@{
+    ViewBag.Title = ViewsKeys.About;
+}
+
+<div class="about">
+
+    <div class="head">
+        <div class="container">
+            <h2 class="h1 text-center">@ViewsKeys.WhoUs</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">
+                    @ViewsKeys.AboutMsg .
+                </p>
+
+                <p class="lead">
+                    @ViewsKeys.AboutMsg2 .
+                </p>
+    
+            </div>
+
+            <div class="col-md-6">
+                <img src="~/Content/images/nasiha.png" style="margin-top:50px;" width="500" height="300" alt="@ViewsKeys.About" class="img-responsive"/>
+
+                @*<img src="https://res.cloudinary.com/files-store/image/upload/v1537366012/NasihaUsers/nasiha.png"
+                     style="margin-top:50px;" width="500" height="300" alt="@ViewsKeys.About" class="img-responsive"/>*@
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,735 @@
+﻿@font-face {
+    font-family: 'cairo';
+    src: url('/fonts/Cairo-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: cairo;
+    background-color: #2A303C;
+    color: #fff;
+}
+.for_admins {
+    background-color: #937f6e;
+    padding: 12px;
+    margin: 0 0 20px;
+}
+
+.userPicture {
+    width: 150px;
+    height: 150px;
+}
+.user {
+    background-color: rgba(50, 54, 57, .7);
+    border-radius: 20px;
+    padding: 15px 0;
+    color: #fff;
+    margin: 0 0 15px
+}
+.overlay {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+.text-start {
+    text-align:start
+}
+.text-end {
+    text-align:end
+}
+@media(max-width:767px) {
+    .blockInXsmall {
+        display: block;
+        margin: auto;
+        width: 100%;
+        color: #fff;
+        border: none;
+    }
+}
+
+.modal-content {
+    color: #2a303c
+}
+
+p {
+    color: #9999a5
+}
+
+a,
+a:hover {
+    color: #0a99ff;
+    letter-spacing: 1px;
+}
+.input-validation-error {
+    border: 2px solid #c32128 !important
+}
+.field-validation-error {
+    color: #a94442 !important;
+}
+
+/* start navbar */
+.navbar-inverse {
+    background-color: #323639;
+    border-color: #fe0cfe;
+}
+.navbar-inverse .navbar-brand {color: #fff;height:50px}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    transition: .75s ease;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 10px
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #fe0cfe;
+}
+
+.navbar-form {
+    border: 0;
+    box-shadow: none;
+    text-align: center
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #fe0cfe
+}
+.dropdown-menu > li > a {padding: 8px 20px; }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #fe0cfe;
+}
+@media (max-width: 767px) {
+    .nav > li > a {
+        padding: 10px;
+    }
+}
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{max-height:none}
+
+.brandPicture {
+    width: 45px;
+    height: auto;
+}
+.navbar-inverse .navbar-nav > li > a.brand:hover,
+.navbar-inverse .navbar-nav > li > a.brand:focus {
+    background-color: transparent
+}
+
+.nav.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top:4px
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+.badge {
+    background-color: #fff;
+    color: #323639
+}
+/* end navbar */
+/* start footer */
+footer {
+    background-color: #323639;
+    min-height: 50px;
+    line-height: 50px;
+}
+footer p {
+    margin:0;
+    color:#fff;
+    padding-top: 8px
+}
+footer p.div_copyrights i {
+    color: red
+}
+footer .langBtn {
+    color: #fff;
+    background:none;
+    border:none;
+    padding-top: 10px
+}
+footer .langBtn .glyphicon {
+    top: 5px;
+    font-size: 20px;
+}
+footer ul.info {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+footer ul.info li {
+    display:inline-block
+}
+
+/* end footer */
+
+/* start contact about */
+.intro {
+    background-image: url("images/intro.jpg");
+    background-size: cover;
+    height: 500px;
+    color: #fff
+}
+
+.home .intro h1 {
+    padding-top:25vh;
+    font-size:60px;
+}
+.home .intro p {
+    font-size: 25px;
+    padding: 30px 0;
+    color: #FFF;
+    background: rgba(67, 43, 38, 0.7);
+    border-radius: 25px;
+}
+@media (max-width: 676px) {
+    .home .intro h1 {
+        padding-top: 25px;
+        font-size: 40px;
+    }
+    .home .intro p {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+.home a {
+    color: #fe0cfe;
+    margin-top:25px;
+    font-weight:bold
+}
+.home a:hover{
+    text-decoration:none
+}
+
+.home i {
+    margin-top: 15px;
+    transition: 1.7s ease-in-out;
+}
+.home i.active {
+    transform:rotate(360deg)
+}
+
+.contact,
+.about,
+.error,
+.intro .overlay {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.contact a:hover {text-decoration:none}
+.contact .social {
+    width: 100%;
+    margin: auto;
+    background-color: cadetblue;
+    color: #fff;
+    height: 130px;
+    line-height: 130px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.contact h4 {
+    text-transform:capitalize;
+    font-weight:bold
+}
+.contact .head,
+.about .head {
+    background-color: #f64bf6;
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+}
+.contact .lead,
+.about .lead {
+    margin-top:50px;
+}
+/* end contact about */
+/* start accountViews */
+/* login, register, ForgotPassword, resetPassword */
+.register,
+.login,
+.ForgotPassword,
+.ForgotPasswordConfirmation,
+.resetPassword,
+.resetPasswordConfirmation {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.login h2,
+.register h2,
+.ForgotPassword h2,
+.resetPassword h2 {
+    margin-bottom:50px;
+    color:#fff
+}
+.changePassword form,
+.editProfile form,
+.login form,
+.register form,
+.ForgotPassword form,
+.resetPassword form {
+    background-color: #2A303C;
+    padding: 30px 30px;
+    border: 1px solid #f64bf6;
+    border-radius: 70px 0;
+    color: #fff;
+}
+@media only screen and (max-width: 767px) {
+    .login form,
+    .register form,
+    .ForgotPassword form,
+    .resetPassword form {
+        padding: 20px 10px;
+        border-radius: 30px 0;
+    }
+}
+.login form i,
+.register form i,
+.ForgotPassword i,
+.resetPassword i{
+    font-size: 100px;
+    text-align:center;
+    display:block;
+    margin-bottom:30px
+}
+.changePassword .btn,
+.editProfile .btn,
+.login form .btn,
+.register form .btn,
+.ForgotPassword .btn,
+.resetPassword .btn {
+    width: 100%;
+    background-color: #323639;
+    border-color: #323639;
+}
+.changePassword .form-control,
+.editProfile .form-control,
+.login form .form-control,
+.register form .form-control,
+.ForgotPassword form .form-control,
+.resetPassword form .form-control {
+    background-color: transparent;
+    border: 2px solid #535454;
+    color: #fff;
+}
+/* login, register, change password */
+/* end accountViews */
+
+/* start manage Views*/
+/* manage, changePassword, editProfile, ChangeProfilePicture, RemoveAccount */
+.manage,
+.changePassword,
+.editProfile,
+.ChangeProfilePicture,
+.RemoveAccount,
+.confirmEmail {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+@media (max-width: 767px){
+    .manage,
+    .changePassword,
+    .editProfile,
+    .ChangeProfilePicture,
+    .RemoveAccount,
+    .confirmEmail {
+        padding-top: 0;
+    }
+}
+.editProfile form,
+.changePassword form {
+    border: 1px solid #f64bf6;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.editProfile .userPicture {
+    cursor: pointer;
+}
+.list-group{
+    margin-top:75px;
+}
+
+.list-group-item {
+    background-color: #323639;
+}
+/* end manage */
+
+/* start advices */
+.advices {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.advices .advice {
+    min-height: 100px;
+    padding: 10px;
+    color: #9da9b0;
+    margin: 8px 0;
+    background-color: #323639;
+}
+.advices .advice .topMenu {
+    padding-bottom: 5px;
+}
+.advices .advice .topMenu button {
+    color:#fff
+}
+.advices .advice p.lead {
+    color: #fff;
+    padding-top:5px;
+}
+.advices .advice .actions button {
+    color: #ddd;
+    font-weight:bold
+}
+.advices .advice .actions button.likeIt {color:red;}
+.advices .advice .actions button.pinIt {color: #40a7ff}
+
+.userData {
+    background-color: #323639;
+    padding: 20px 0;
+    margin: 20px 0px;
+    border-right: 1px dashed #ff09ff;
+    border-left: 1px dashed #ff09ff
+}
+.userData h5 {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.userData h5 i{
+    font-size:14px;
+    font-weight:normal;
+}
+.advices .modal-content {
+    color: #2a303c;
+}
+/* taps */
+.nav-tabs {
+    border-bottom: 1px solid #ff09ff;
+    background-color: #323639;
+}
+.nav-tabs > li {
+    width: 33.33333%;
+    text-align: center;
+}
+.nav-tabs > li > a {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: #323639;
+    color: #acb0d8;
+}
+.nav-tabs > li > a:hover {
+    border: 1px dotted #ff09ff;
+    border-bottom-color: transparent;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #fff;
+    background-color: #2a303c;
+    border: 1px solid #ff09ff;
+    border-bottom-color: transparent;
+}
+
+/* end advices */
+/* start newAdvice */
+.newAdvice {
+    padding-top: 50px;
+}
+.newAdvice .userData p {
+    color: #937f6e
+}
+.newAdvice .userData p b {
+    border: 2px solid #937f6e;
+    padding: 5px 16px;
+    margin: 0 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+.newAdvice form .form-control {
+    color: whitesmoke;
+    font-size: 20px;
+    background: #323639;
+    border: 0;
+    padding: 30px 20px;
+    min-height:230px;
+    max-height:230px;
+    min-width:100%;
+    max-width:100%;
+}
+.newAdvice form .btn {
+    color: #fff;
+}
+.newAdvice form .roleBtn {
+    background-color: #2a303c;
+    padding: 10px;
+    border: 1px dotted #f64bf6;
+    transition: .25s ease
+}
+.newAdvice form .roleBtn:hover,
+.newAdvice form .roleBtn:focus {
+    background-color: #322458;
+    border-style: solid;
+}
+
+.newAdvice .modal-content {
+    color: #2a303c;
+}
+
+/* end newAdvice */
+
+/* start searchResult advice2YourSelf thankU */
+.searchResult ,
+.advice2YourSelf,
+.thankU {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.thankU .thankMsg p.lead {
+    min-height: 100px;
+    padding: 30px;
+    color: #ffffff;
+    margin: 8px auto;
+    background-color: #323639;
+    width: 70%;
+}
+
+.searchResult .lead {
+    margin: 80px 0 30px;
+    font-size: 30px;
+}
+.searchResult .lead i.fa {
+    font-size: 300px;
+    color: #fff;
+    margin: 25px 0
+}
+@media (max-width: 767px){
+    .searchResult h3 {
+        padding-bottom: 30px;
+        border-bottom: 1px dotted #9999a5
+    }
+
+}
+
+#searchForm .form-control {
+    height: 32px;
+    border: 0;
+    border-radius: 0;
+    background-color: #485660;
+    color: #fff;
+    margin-top: -4px;
+    margin-right: -4px;
+}
+#searchForm button {
+    color: #fff;
+    background-color: #f64bf6;
+    border: 0;
+    padding: 6px 24px;
+}
+.hideform {
+    display: none
+}
+@media (min-width:768px) and (  max-width: 991px) {
+    #searchForm .form-control{
+        width:180px;
+    }
+}
+@media (max-width: 767px) {
+    #searchForm .form-control {
+        margin-right: 0;
+        height: 35px;
+        margin-bottom: 0;
+    } 
+}
+/* end searchResult advice2YourSelf thankU */
+/* start admins  */
+.adminsLayout {
+    background-image: url("images/intro.jpg");
+    background-size: contain;
+} 
+.adminsLayout .showMenu {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    z-index: 1029;
+}
+.adminsLayout .showMenu .showMenuBtn {
+    display: inline-block;
+    padding: 3px 15px;
+    color: #fff;
+    background-color: #f64bf6;
+    border-radius: 8px;
+    cursor: pointer
+}
+.adminsLayout .adminMenu {
+    background-color: rgba(0, 0, 0,.7);
+    padding-top: 50px;
+    color: #fff;
+    margin-bottom: 0; /* to reset bootstrap ul margin */
+}
+@media(max-width: 767px){
+    .adminsLayout .adminMenu {
+        display: none;
+        background-color: rgba(50, 54, 57,1);
+        border-radius: 10px;
+        padding-top: 0;
+        position: fixed;
+        top: 105px;
+        left: 20px;
+        z-index: 5001;
+        width: 90%
+    }
+}
+.adminsLayout .adminMenu a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    transition: .5s ease;
+    border-bottom: 1px solid #484e52;
+}
+.adminsLayout .adminMenu a:hover,
+.adminsLayout .adminMenu a:focus {
+    background-color: #fe0cfe;
+    text-decoration:none;
+    color:#fff
+}
+
+.adminsLayout .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff
+}
+
+@media(max-width: 767px) {
+    .adminsLayout .content {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.adminsLayout .content h2 {
+    font-weight: bold;
+    color: #fff
+}
+
+.adminsLayout .content h3 {
+    padding: 20px 0 35px;
+    color: #fff
+}
+.adminsLayout .alert {
+    background-color: #4b4751;
+    border: 0;
+    text-align:center
+}
+.adminsLayout .alert p {
+    color:#fff
+}
+.adminsLayout .dashboard .dashboardItem {
+    box-shadow: 0px 0px 16px 1px #fe0cfe;
+    border: 1px solid #fff;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.adminsLayout .dashboard .dashboardItem h4:first-of-type {
+    font-size: 40px;
+}
+
+.adminsLayout .user {
+
+}
+.adminsLayout .advices{padding:0}
+.adminsLayout .advices .advice {
+    color: #ddd;
+    border: 1px solid #484e52;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0 ,.7);
+}
+/*.adminsLayout .advices .advice a {
+    font-weight: bold;
+    color: #0a99ff;
+    letter-spacing: 1px;
+}*/
+.adminsLayout .advices .advice p {
+    color: #ddd
+}
+/* end admins  */
+
+/*start ads*/
+
+.placeName {
+    padding: 20px;
+    border: 2px solid #328888;
+    border-radius: 13px;
+    background-color: #323639;
+    min-height: 100px;
+}
+
+
+.ad4admin {
+    background-color: #6c7f8e;
+    margin-bottom: 30px;
+}
+.code {
+    background-color: #1E1E1E;
+    color: #19ff00;
+    min-height: 150px;
+    max-height: 150px;
+    overflow: auto;
+    padding: 10px;
+}
+.preview {
+    background-color: rgba(0,0,0,.5);
+    min-height: 150px;
+    max-height: 150px;
+    overflow: auto;
+    padding: 10px;
+}
+.ad4admin .info {
+    padding:10px 0;
+    background-color: #2A303C;
+    color:#fff;
+}
+.ad4admin .info a{padding: 0 8px;}
+
+.adsForm,
+.newPlace {
+    color: #fff;
+}
+.adsForm form,
+.newPlace form {
+    margin: 30px 0 0;
+}
+.adsForm .btn ,
+.newPlace .btn {
+    width: 150px;
+    padding: 5px;
+}
+.adsForm .form-control,
+.newPlace .form-control {
+    background-color: rgba(38, 41, 44, 0.9);
+    color: #22b6e4;
+    border: 0;
+}
+.adsForm select.form-control {
+    padding-top:0;
+    color:azure
+}

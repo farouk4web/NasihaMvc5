@@ -1,0 +1,35 @@
+﻿@using Nasiha.Resources
+
+@{
+    ViewBag.Title = ViewsKeys.Home;
+}
+
+<div class="home">
+
+    <div class="intro text-center">
+        <div class="overlay">
+            <div class="container">
+
+                <h1>@ViewsKeys.AppName</h1>
+                <p class="lead">
+                    @ViewsKeys.IntroMsg
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <br />
+
+                        @Html.ActionLink(ViewsKeys.About, "About", "Home")
+                        <span>,</span>
+                        @Html.ActionLink(ViewsKeys.Contact, "Contact", "Home")
+
+                    }
+                </p>
+
+                
+                <i class="fa fa-soccer-ball-o fa-5x"></i>
+
+            </div>
+        </div>
+    </div>
+    
+</div>

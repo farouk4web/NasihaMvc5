@@ -1,0 +1,81 @@
+﻿@using Nasiha.Resources
+
+@{
+    ViewBag.Title = ViewsKeys.Contact;
+}
+
+<div class="contact text-center">
+
+    <div class="head">
+        <div class="container">
+            <h2 class="h1 text-center">@ViewsKeys.Contact</h2>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <p class="lead">
+            @ViewsKeys.ContactMsg<br />
+            @ViewsKeys.ContactMsg2
+        </p>
+
+        <div class="socialMediaService">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <a href="https://twitter.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#55acee">@ViewsKeys.Twitter <i class="fa fa-twitter"></i></h2>
+                    </a>
+
+                </div>
+
+
+                <div class="col-sm-6">
+                    <a href="https://facebook.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#3b5998">@ViewsKeys.Facebook <i class="fa fa-facebook"></i></h2>
+                    </a>
+                </div>
+
+
+
+                <div class="col-sm-6">
+                    <a href="https://www.instagram.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#f46f30">@ViewsKeys.Instagram <i class="fa fa-instagram"></i></h2>
+                    </a>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <a href="https://web.whatsapp.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#25d366">@ViewsKeys.Whatsapp <i class="fa fa-whatsapp"></i></h2>
+                    </a>
+                </div>
+
+
+
+                <div class="col-sm-6">
+                    <a href="https://tiktok.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#010101">@ViewsKeys.Tiktok <i class="fa fa-tiktok"></i></h2>
+                    </a>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <a href="https://youtube.com/nasiha4all" target="_blank">
+                        <h2 class="social" data-color="#ff0000">
+                            @ViewsKeys.Youtube <i class="fa fa-youtube"></i>
+                        </h2>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+}

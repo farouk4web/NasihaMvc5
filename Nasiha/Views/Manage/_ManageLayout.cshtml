@@ -1,0 +1,97 @@
+﻿@using Nasiha.Resources
+@using Nasiha.Models
+
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @ViewsKeys.AppName</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+
+    @if (UICulture == "ar-EG")
+    {
+        <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=droid-naskh" />
+        @Styles.Render("~/Content/rtl")
+    }
+
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge"><i class="fa fa-id-card-o fa-lg fa-fw"></i></span>
+                            <a href="/Manage/editProfile">@ViewsKeys.PersonalInformation </a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge"><i class="fa fa-lock fa-lg fa-fw"></i></span>
+                            <a href="/Manage/ChangePassword">@ViewsKeys.ChangePassword </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-sm-8">
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("_Footer")
+
+    <div class="container">
+        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">@ViewsKeys.WarningMsg</h4>
+                    </div>
+                    <div class="modal-body">
+                        @ViewsKeys.WarningSearchQuery
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">@ViewsKeys.Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/libs")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $("#searchButton").on("click", function () {
+            var searchQ = $("#searchQuery").val();
+
+            if (searchQ === "" || searchQ === " ") {
+                $('#warningModal').modal('toggle');
+            } else {
+                $("#searchButton").parents("form").submit();
+            }
+        });
+    </script>
+
+
+</body>
+</html>

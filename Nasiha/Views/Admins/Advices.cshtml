@@ -1,0 +1,58 @@
+﻿@using Nasiha.Resources
+
+@model IEnumerable<Nasiha.Models.Advice>
+
+@{
+    ViewBag.Title = ViewsKeys.Advices;
+}
+
+<div class="advices">
+    <h2><i class="fa fa-envelope"></i> &nbsp; @ViewsKeys.Advices</h2>
+    <h3>@Model.Count() @ViewsKeys.Advice</h3>
+
+    @if (Model.Count() == 0)
+    {
+        <div class="alert alert-warning">
+            <p class="lead">
+                @ViewsKeys.NoAdvicesOnSite
+            </p>
+        </div>
+    }
+
+    @foreach (var advice in Model)
+    {
+        <div class="advice">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h5>
+                        <b>@ViewsKeys.To : </b> &nbsp;
+                        <a href="/@advice.Receiver.Nickname" class="text-capitalize">@advice.Receiver.FullName</a>
+                    </h5>
+                    
+                    @if (advice.Sender == null)
+                    {
+                        <h5>
+                            <b>@ViewsKeys.From :</b> &nbsp; @ViewsKeys.NotAvailable
+                        </h5>
+                    }
+                    else
+                    {
+                        <h5>
+                            <b>@ViewsKeys.From :</b> &nbsp; <a href="/@advice.Sender">@advice.Sender</a>
+                        </h5>
+                    }
+                    
+                    <h5>
+                        <b>@ViewsKeys.SentIn</b> : @advice.PublishedDate
+                    </h5>
+                </div>
+                <div class="col-sm-6">
+                    <p class="lead">
+                        @advice.Content
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

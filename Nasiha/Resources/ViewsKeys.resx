@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutMsg" xml:space="preserve">
+    <value>Nasiha site, simply its just a way to make people give advices without make anothers feeling something like Shortage or any thing like this</value>
+  </data>
+  <data name="AboutMsg2" xml:space="preserve">
+    <value>and there is many and many of whomwant to order advices but they dont, because they think when do it this will make the another person better than hisself and this is wrong undrstant, our site come to change this wrong Concepts and help and this is our vision</value>
+  </data>
+  <data name="AboutNasiha" xml:space="preserve">
+    <value>About Nasiha</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Ad" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="AddOwner" xml:space="preserve">
+    <value>Add as Owner</value>
+  </data>
+  <data name="AddToAdmins" xml:space="preserve">
+    <value>Add To Admins</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>Admins</value>
+  </data>
+  <data name="AdPlace" xml:space="preserve">
+    <value>Ad Place</value>
+  </data>
+  <data name="Ads" xml:space="preserve">
+    <value>Ads</value>
+  </data>
+  <data name="AdsPlaces" xml:space="preserve">
+    <value>Ads Places</value>
+  </data>
+  <data name="Advice" xml:space="preserve">
+    <value>Advice</value>
+  </data>
+  <data name="AdvicePlaceholder" xml:space="preserve">
+    <value>leave Your Advice Here </value>
+  </data>
+  <data name="Advices" xml:space="preserve">
+    <value>Advices</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Nasiha</value>
+  </data>
+  <data name="AppNameCom" xml:space="preserve">
+    <value>Nasiha.com</value>
+  </data>
+  <data name="BackToMessages" xml:space="preserve">
+    <value>Back To Advices</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="ChangePictureSuccessMsg" xml:space="preserve">
+    <value>Your profile picture was updated Successfully</value>
+  </data>
+  <data name="ChangeProfilePicture" xml:space="preserve">
+    <value>Change Profile Picture</value>
+  </data>
+  <data name="ClickHereToLogin" xml:space="preserve">
+    <value>click here to log in</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Confirmed" xml:space="preserve">
+    <value>Email Confirmed</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>ConfirmEmail</value>
+  </data>
+  <data name="ConfirmEmailSuccessMsg" xml:space="preserve">
+    <value>Thank you for confirming your email. Your email confirmed succefully, Please</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactMsg" xml:space="preserve">
+    <value>Hi, we would like to till you, we have compelete team and readt to replay about your  questions On Social Media Sites</value>
+  </data>
+  <data name="ContactMsg2" xml:space="preserve">
+    <value>Send your question and we wil replay to You directly</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Farouk Abdelhamid</value>
+  </data>
+  <data name="DeveloperCopyrights" xml:space="preserve">
+    <value>Designed and Developd with</value>
+  </data>
+  <data name="EditPersonalInformation" xml:space="preserve">
+    <value>Edit Personal Information</value>
+  </data>
+  <data name="EditPersonalInformationSuccessMsg" xml:space="preserve">
+    <value>Your informations had updated successfully</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>We found an error while we processing your request, and we are going to solve it</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot your password</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value>Forgot Password Confirmation</value>
+  </data>
+  <data name="ForgotPasswordConfirmationMsg" xml:space="preserve">
+    <value>Please check your email to reset your password.</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="HaveAccount" xml:space="preserve">
+    <value>have Account? Login</value>
+  </data>
+  <data name="Hi" xml:space="preserve">
+    <value>Hi</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="IntroMsg" xml:space="preserve">
+    <value>Nasiha It was the best place to share your advice with your friends or any body.</value>
+  </data>
+  <data name="Liked" xml:space="preserve">
+    <value>Loved</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="ManageMsg" xml:space="preserve">
+    <value>Here You can Change your account settings</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Advice</value>
+  </data>
+  <data name="NasihaTeam" xml:space="preserve">
+    <value>Nasiha Team</value>
+  </data>
+  <data name="NewAd" xml:space="preserve">
+    <value>New Ad</value>
+  </data>
+  <data name="NewAdvice" xml:space="preserve">
+    <value>Advice To </value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NewPlace" xml:space="preserve">
+    <value>New Place</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="NoAdsMsg" xml:space="preserve">
+    <value>There is No Ads  on our Site Yet</value>
+  </data>
+  <data name="NoAdsPlacesYetMsg" xml:space="preserve">
+    <value>Sorry We do not found any ads places</value>
+  </data>
+  <data name="NoAdvices1" xml:space="preserve">
+    <value>Ther is no Any Advices was sent to you before</value>
+  </data>
+  <data name="NoAdvices2" xml:space="preserve">
+    <value>try to share your account on social media sites and wait Advices</value>
+  </data>
+  <data name="NoAdvicesOnSite" xml:space="preserve">
+    <value>There is No Advice on our Site Yet</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="NotConfirmed" xml:space="preserve">
+    <value>Email Not Confirmed</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>OnlineUsers</value>
+  </data>
+  <data name="OurAdvantages" xml:space="preserve">
+    <value>Our Advantages</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Site Owner</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="Pinned" xml:space="preserve">
+    <value>Pinned</value>
+  </data>
+  <data name="PleaseConfirmMsg" xml:space="preserve">
+    <value>Please confirm your account to be able to reset your password on the future if you forgot it. going to your email and press confirm Button</value>
+  </data>
+  <data name="PreviewOfCurrentAd" xml:space="preserve">
+    <value>Preview Of Current Ad</value>
+  </data>
+  <data name="ProfilePicture" xml:space="preserve">
+    <value>Profile Picture</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterAsNew" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RemoveAccount" xml:space="preserve">
+    <value>Remove Account</value>
+  </data>
+  <data name="RemoveAdviceWarning" xml:space="preserve">
+    <value>Are you sure you want to remove this Advice</value>
+  </data>
+  <data name="RemoveFromAdmins" xml:space="preserve">
+    <value>Remove From Admins</value>
+  </data>
+  <data name="RemoveOwner" xml:space="preserve">
+    <value>Remove Owner</value>
+  </data>
+  <data name="RemoveUserByAdminMsg" xml:space="preserve">
+    <value>Are you sure you want to remove this user for ever remember You cant restore user or his advices, be careful</value>
+  </data>
+  <data name="RemoveUserdangerMsg" xml:space="preserve">
+    <value>Remember: if you remove your account you cant restore it again</value>
+  </data>
+  <data name="RemoveUserSorryMsg" xml:space="preserve">
+    <value>We are sorry to see you leave :(</value>
+  </data>
+  <data name="RemoveUserWarningMsg" xml:space="preserve">
+    <value>Are you sure you want to remove your account for ever</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="ResetPasswordConfirmation" xml:space="preserve">
+    <value>Reset password confirmation</value>
+  </data>
+  <data name="ResetPasswordSuccessConfirmation" xml:space="preserve">
+    <value>Your password has been reset. Please</value>
+  </data>
+  <data name="Reseved" xml:space="preserve">
+    <value>Reseved</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>Search Result</value>
+  </data>
+  <data name="SearchResultZero1" xml:space="preserve">
+    <value>Sorry We dont find any user with this name, try again.</value>
+  </data>
+  <data name="SearchResultZero2" xml:space="preserve">
+    <value>Do not be Sad! together We can find him!</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Sittings" xml:space="preserve">
+    <value>Sittings</value>
+  </data>
+  <data name="Smile" xml:space="preserve">
+    <value>Smile To World, World SmileTo You</value>
+  </data>
+  <data name="Sorry" xml:space="preserve">
+    <value>Sorry</value>
+  </data>
+  <data name="SorryMsg" xml:space="preserve">
+    <value>Sorry You cant to send advice to your self if you want to do this you can try to do it on real life</value>
+  </data>
+  <data name="SuccessChangePasswordMsg" xml:space="preserve">
+    <value>Your password has been changed successfully</value>
+  </data>
+  <data name="ThankU" xml:space="preserve">
+    <value>ThankU</value>
+  </data>
+  <data name="ThankUMsg" xml:space="preserve">
+    <value>Thank you for your good ethics, be sure Your message will change this person to better</value>
+  </data>
+  <data name="ThisAdOnThisPlace" xml:space="preserve">
+    <value>This Ad On The follwing  Place</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="UpdateAd" xml:space="preserve">
+    <value>Update Ad</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserMsgsCountNotice" xml:space="preserve">
+    <value>Advices were sent to this user since he Register</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="WarningMsg" xml:space="preserve">
+    <value>Warning Message</value>
+  </data>
+  <data name="WarningSearchQuery" xml:space="preserve">
+    <value>you have to write something first</value>
+  </data>
+  <data name="WhoUs" xml:space="preserve">
+    <value>Who Us</value>
+  </data>
+  <data name="Youtube" xml:space="preserve">
+    <value>Youtube</value>
+  </data>
+  <data name="loveIt" xml:space="preserve">
+    <value>Love It</value>
+  </data>
+  <data name="pinIt" xml:space="preserve">
+    <value>Pin It</value>
+  </data>
+  <data name="Langauge" xml:space="preserve">
+    <value>Langauge</value>
+  </data>
+  <data name="Tiktok" xml:space="preserve">
+    <value>TikTok</value>
+  </data>
+  <data name="Whatsapp" xml:space="preserve">
+    <value>Whatsapp</value>
+  </data>
+  <data name="SentIn" xml:space="preserve">
+    <value>Sent in</value>
+  </data>
+  <data name="siteDescription" xml:space="preserve">
+    <value>the best place to ask advice from your friends</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete this user For ever</value>
+  </data>
+  <data name="RemoveUserNote" xml:space="preserve">
+    <value>you can delete this user and every thing related with him going to deleted too.</value>
+  </data>
+  <data name="UserAdvices" xml:space="preserve">
+    <value>User Advices</value>
+  </data>
+  <data name="ForAdminsOnlay" xml:space="preserve">
+    <value>This Part Shown For Admins Onlay</value>
+  </data>
+</root>

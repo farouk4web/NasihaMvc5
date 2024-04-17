@@ -1,0 +1,61 @@
+﻿@using Nasiha.Resources
+
+@using Nasiha.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = ViewsKeys.LogIn;
+}
+<div class="login">
+    <div class="container">
+        <h2 class="text-center">@ViewsKeys.LogIn</h2>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                {
+                    <i class="fa fa-user"></i>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-lg", placeholder = ViewsKeys.Email, autofocus =  "autofocus" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control input-lg", placeholder = ViewsKeys.Password })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            @Html.CheckBoxFor(m => m.RememberMe)  @ViewsKeys.RememberMe
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="@ViewsKeys.LogIn" class="btn btn-primary btn-lg" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>
+                                @Html.ActionLink(ViewsKeys.RegisterAsNew, "Register")
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>
+                                @Html.ActionLink(ViewsKeys.ForgotPassword, "ForgotPassword")
+                            </p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
