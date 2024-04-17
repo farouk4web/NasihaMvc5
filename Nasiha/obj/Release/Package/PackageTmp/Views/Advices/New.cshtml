@@ -1,0 +1,138 @@
+﻿@using Nasiha.Models
+@using Nasiha.Resources
+
+@model Nasiha.ViewModels.NewAdviceVM
+@{
+    ViewBag.Title = ViewsKeys.NewAdvice + " " + Model.Receiver.FullName;
+
+    var confirmEmailState = ViewsKeys.NotConfirmed;
+    if (Model.Receiver.EmailConfirmed == true)
+    {
+        confirmEmailState = ViewsKeys.Confirmed;
+    }
+}
+
+<div class="newAdvice">
+    <div class="container">
+
+        <div class="userData text-center">
+            <img src="@Model.Receiver.ProfileImageSrc" alt="@Model.Receiver.FullName" class="userPicture img-circle img-thumbnail center-block" />
+            <h5 class="text-capitalize">@Model.Receiver.FullName</h5>
+            <p><b>@Model.Receiver.Advices.Count()</b> @ViewsKeys.UserMsgsCountNotice</p>
+
+            @if (User.IsInRole(RoleName.Admins))
+            {
+                <div class="secretData">
+                    <hr />
+                    <h5 class="for_admins">@ViewsKeys.ForAdminsOnlay</h5>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            @using (Html.BeginForm("AddToAdmins", "Admins", FormMethod.Post))
+                            {
+                                <div class="form-group">
+                                    @Html.AntiForgeryToken()
+                                    <input type="text" name="userId" value="@Model.Receiver.Id" hidden />
+                                    <button type="submit" title="@ViewsKeys.AddToAdmins" class="btn roleBtn">
+                                        <i class="fa fa-user-plus fa-fw fa-2x"></i> @ViewsKeys.AddToAdmins
+                                    </button>
+                                </div>
+                            }
+
+                            @using (Html.BeginForm("RemoveFromAdmins", "Admins", FormMethod.Post))
+                            {
+                                <div class="form-group">
+                                    @Html.AntiForgeryToken()
+                                    <input type="text" name="userId" value="@Model.Receiver.Id" hidden />
+                                    <button type="submit" title="@ViewsKeys.RemoveFromAdmins" class="btn roleBtn">
+                                        <i class="fa fa-user-times fa-fw fa-2x"></i> @ViewsKeys.RemoveFromAdmins
+                                    </button>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="col-sm-4">
+
+                            <h6>@Model.Receiver.Email</h6>
+                            <h6>@confirmEmailState</h6>
+
+                            <a href="/Admins/Advices/@Model.Receiver.Id" title="@ViewsKeys.Advices">@ViewsKeys.UserAdvices</a>
+                        </div>
+
+                        <div class="col-sm-4">
+
+                            <p>
+                                @ViewsKeys.RemoveUserNote
+                            </p>
+
+                            <br />
+
+                            <button id="js_removeUser" type="button" title="@ViewsKeys.RemoveAccount" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i> @ViewsKeys.DeleteUser
+                            </button>
+                            @using (Html.BeginForm("ConfirmRemoveAccount", "Admins", FormMethod.Post, new { id = "removeUserForm" }))
+                            {
+                                <div class="form-group">
+                                    @Html.AntiForgeryToken()
+                                    <input type="text" name="userId" value="@Model.Receiver.Id" hidden />
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">@ViewsKeys.WarningMsg</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="lead text-center">
+                                        @ViewsKeys.RemoveUserByAdminMsg
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">@ViewsKeys.Close</button>
+                                    <button type="button" class="btn btn-danger" onclick="javascript:document.getElementById('removeUserForm').submit()">@ViewsKeys.Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                </div>
+
+            }
+
+        </div>
+
+        <form action="/Advices/NewAdvice" method="post">
+
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.Advice.Content, new { @class = "form-control", placeholder = ViewsKeys.AdvicePlaceholder, cols = "20", rows = "6", autofocus = "autofocus" })
+                @Html.ValidationMessageFor(m => m.Advice.Content, null, new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.AntiForgeryToken()
+                <input type="hidden" value="@Model.Receiver.Id" name="Advice.ReceiverId" />
+                <input type="submit" value="@ViewsKeys.Send" class="btn btn-primary btn-lg center-block" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        $("#js_removeUser").on("click", function () {
+            $("#warningModal").modal("toggle");
+        });
+
+    </script>
+}

@@ -1,0 +1,195 @@
+﻿@using Nasiha.Resources
+
+@model Nasiha.ViewModels.AdvicesVM
+@{
+    ViewBag.Title = ViewsKeys.Advices;
+    var domain = Model.SiteDomain;
+}
+
+<div class="advices">
+    <div class="container">
+
+        <div class="userData text-center">
+            <img src="@Model.User.ProfileImageSrc" alt="@Model.User.FullName" title="@ViewsKeys.ChangeProfilePicture" class="userPicture userImage img-circle img-thumbnail center-block" />
+
+            <h5 class="text-capitalize">
+                <a href="/Manage/EditProfile" title="@ViewsKeys.Sittings"><i class="fa fa-cog"></i></a>
+                @Model.User.FullName
+            </h5>
+
+            <h4><a href="/@Model.User.Nickname">@Model.User.Nickname</a></h4>
+
+            <span class="fb-share-button"
+                 data-href="http://www.@domain/@Model.User.Nickname"
+                 data-layout="button_count">
+            </span>
+        </div>
+
+
+        <div class="msg mixer">
+            <ul class="nav nav-tabs">
+                <li data-filter="all" class="active"><a href="all">@ViewsKeys.Reseved</a></li>
+                <li data-filter=".liked"><a href="liked">@ViewsKeys.Liked</a></li>
+                <li data-filter=".pinned"><a href="pinned">@ViewsKeys.Pinned</a></li>
+            </ul>
+
+            <div id="advicesmixer">
+                @if (Model.User.Advices.Count() == 0)
+                {
+                    <div class="tab-pane active" id="pinned">
+                        <div class="advice text-capitalize text-center">
+                            <p class="lead">
+                                @ViewsKeys.NoAdvices1<br />
+                                @ViewsKeys.NoAdvices2.<br />
+                                <b>@ViewsKeys.NasihaTeam</b>
+                            </p>
+                        </div>
+                    </div>
+                }
+
+                @foreach (var advice in Model.User.Advices)
+                {
+                    var pinState = "";
+                    var likeState = "";
+                    var likeIt = "";
+                    var pinIt = "";
+
+                    if (advice.PinIt == true) { pinState = "pinned"; pinIt = "pinIt"; }
+                    if (advice.LikeIt == true) { likeState = "liked"; likeIt = "likeIt"; }
+
+                    <div class="mix @pinState @likeState">
+                        <div class="advice">
+                            <div class="topMenu">
+                                <div class="pull-left text-start">
+                                    <span class="date">@advice.PublishedDate</span>
+                                </div>
+                                <div class="pull-right text-end">
+                                    <button class="btn-link fa fa-trash" id="js-remove" data-adviceId="@advice.Id"></button>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <p>
+                                @advice.Content
+                            </p>
+                            <div class="actions">
+                                <button class="@likeIt btn-link fa fa-heart" id="likeBtn" data-id="@advice.Id" data-likeOrNot="@advice.LikeIt" title="@ViewsKeys.loveIt"></button>
+                                <button class="@pinIt btn-link fa fa-thumb-tack" id="pinBtn" data-id="@advice.Id" data-pinOrNot="@advice.PinIt" title="@ViewsKeys.pinIt"></button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+
+        <!-- remove advice Modal -->
+        <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">@ViewsKeys.WarningMsg</h4>
+                    </div>
+                    <div class="modal-body">
+                        @ViewsKeys.RemoveAdviceWarning
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@ViewsKeys.Close</button>
+                        <button type="button" class="btn btn-danger" id="confirmRemove">@ViewsKeys.Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/mixitup")
+
+    <script>
+        $(document).ready(function () {
+
+            // add And remove LIKE to advice
+            $(".advice").on("click", "#likeBtn", function () {
+                var likBtn = $(this),
+                    adviceId = likBtn.attr("data-id"),
+                    likeOrNot = likBtn.attr("data-likeOrNot");
+
+                $.ajax({
+                    url: "/Advices/LikeOrNot?id=" + adviceId + "&likeOrNot=" + likeOrNot,
+                    method: "POST",
+                    success: function () {
+                        likBtn.toggleClass("likeIt");
+                        likBtn.parents(".mix").toggleClass("liked");
+                    }
+                });
+
+            });
+
+            // add And remove PIN to advice
+            $(".advice").on("click", "#pinBtn", function () {
+                var pinBtn = $(this),
+                    adviceId = pinBtn.attr("data-id"),
+                    pinOrNot = pinBtn.attr("data-pinOrNot");
+
+                $.ajax({
+                    url: "/Advices/PinOrNot?id=" + adviceId + "&pinOrNot=" + pinOrNot,
+                    method: "POST",
+                    success: function () {
+                        pinBtn.toggleClass("pinIt");
+                        pinBtn.parents(".mix").toggleClass("pinned");
+                    }
+                });
+
+            });
+
+            // run advice mixer
+            window.mixitup('#advicesmixer');
+
+            //// run advices Tap
+            $(".nav-tabs a").on("click", function (e) {
+                e.preventDefault();
+                $(this).parent().addClass("active").siblings("li").removeClass("active");
+            });
+
+
+            // remove Scenario
+            // run remove bootstrap Modal
+            var adviceId = 123,
+                removedAdviceBtn = "bad advice";
+
+            $(".advices").on("click", "#js-remove", function () {
+                adviceId = $(this).attr("data-adviceId");
+                $('#removeModal').modal('toggle');
+                removedAdviceBtn = $(this);
+            });
+
+            // remove advice ajax request
+            $(".advices").on("click", "#confirmRemove", function () {
+                $.ajax({
+                    url: "/Advices/Remove/" + adviceId,
+                    method: "POST",
+                    success: function () {
+                        $('#removeModal').modal('toggle');
+                        removedAdviceBtn.parents(".advice").remove();
+                    }
+                });
+            });
+
+        });
+    </script>
+}

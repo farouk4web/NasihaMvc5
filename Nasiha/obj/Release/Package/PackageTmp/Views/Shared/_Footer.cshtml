@@ -1,0 +1,40 @@
+﻿@using Nasiha.Resources
+
+<footer class="text-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-6 col-sm-4">
+                <p>
+                    &copy; @DateTime.Now.Year - @ViewsKeys.AppName
+                </p>
+            </div>
+
+            <div class="col-xs-6 col-sm-4">
+
+                <div class="dropup">
+                    <button class="langBtn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-globe fa-2x"></i> <span>@ViewsKeys.Langauge</span>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>@Html.ActionLink("عربي", "ChangeLanguge", "Home", new { lang = "ar-EG", returnUrl = Request.Url }, null)</li>
+                        <li>@Html.ActionLink("English", "ChangeLanguge", "Home", new { lang = "en-AU", returnUrl = Request.Url }, null)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+                <p class="div_copyrights">
+                    @ViewsKeys.DeveloperCopyrights <i class="fa fa-heart"></i> @ViewsKeys.By
+                    <a href="https://farouk4web.github.io" target="_blank">@ViewsKeys.Developer</a>
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+</footer>
+

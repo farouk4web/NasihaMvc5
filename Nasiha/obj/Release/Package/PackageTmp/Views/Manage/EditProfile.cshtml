@@ -1,0 +1,52 @@
+﻿@using Nasiha.Resources
+
+@model Nasiha.Models.EditProfile
+@{
+    ViewBag.Title = ViewsKeys.EditPersonalInformation;
+}
+<div class="editProfile">
+    <h2>@ViewsKeys.EditPersonalInformation</h2>
+    <hr />
+
+    @if (ViewBag.success == true)
+    {
+        <div class="alert alert-success">
+            @ViewsKeys.EditPersonalInformationSuccessMsg
+        </div>
+    }
+
+    @if (ViewBag.confirmEmailState == false)
+    {
+        <div class="alert alert-warning">
+            <p class="lead">
+                @ViewsKeys.PleaseConfirmMsg
+            </p>
+        </div>
+    }
+
+    <img src="@ViewBag.profileImage" alt="@ViewsKeys.ProfilePicture" title="@ViewsKeys.ChangeProfilePicture" class="userPicture userImage img-circle center-block" />
+
+    <form action="/Manage/ChangeProfilePicture" method="post" enctype="multipart/form-data" class="profilePictureForm" hidden>
+        <input type="file" accept="image/png, image/jpeg, image/jpg" name="profilePicture" class="profilePictureInput" />
+        @Html.AntiForgeryToken()
+    </form>
+
+    @using (Html.BeginForm("EditProfile", "Manage", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName)
+            @Html.TextBoxFor(m => m.FullName, new { @class = "form-control input-lg" })
+            @Html.ValidationMessageFor(m => m.FullName)
+        </div>
+
+        <div class="form-group text-end">
+            @Html.AntiForgeryToken()
+            <input type="submit" value="@ViewsKeys.Save" class="btn btn-primary" />
+        </div>
+    }
+
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

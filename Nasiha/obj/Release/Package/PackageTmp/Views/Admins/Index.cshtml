@@ -1,0 +1,66 @@
+﻿@using Nasiha.Resources
+
+@model Nasiha.ViewModels.DashboardVM
+@{
+    ViewBag.Title = ViewsKeys.ControlPanel;
+}
+
+<div class="dashboard">
+
+    <h2><i class="fa fa-tachometer "></i> &nbsp; @ViewsKeys.ControlPanel</h2>
+    <h3>@ViewsKeys.Dashboard</h3>
+
+    <div class="dashboardItem text-center">
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <i class="fa fa-envelope fa-5x"></i>
+            </div>
+            <div class="col-sm-6">
+                <h4>@Model.Advices</h4>
+                <h4>@ViewsKeys.Advice</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="dashboardItem text-center">
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <i class="fa fa-user-o fa-5x"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>@Model.Users</h4>
+                        <h4>@ViewsKeys.User</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="dashboardItem text-center">
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <i class="fa fa-user-secret fa-5x"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>@Model.Admins</h4>
+                        <h4>@ViewsKeys.Admin</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

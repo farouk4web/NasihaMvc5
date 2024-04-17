@@ -1,0 +1,18 @@
+﻿#searchForm .form-control {
+    margin-right: 0;
+    margin-left: -4px;
+}
+@media (max-width: 768px) {
+    #searchForm .form-control {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.showMenu {
+    right: 20px;
+}
+@media(max-width: 767px) {
+    .adminMenu {
+        right: 20px;
+    }
+}

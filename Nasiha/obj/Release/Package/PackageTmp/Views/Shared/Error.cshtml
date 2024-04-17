@@ -1,0 +1,15 @@
+﻿
+@using Nasiha.Resources
+
+@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+<div class="error text-center">
+    <div class="container">
+        <h1 class="text-danger">@ViewsKeys.Error</h1>
+        <i class="fa fa-warning fa-5x"></i>
+        <h2 class="text-danger">@ViewsKeys.ErrorMsg.</h2>
+    </div>
+</div>

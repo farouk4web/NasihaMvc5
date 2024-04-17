@@ -1,0 +1,49 @@
+﻿@using Nasiha.Models
+@using Nasiha.Resources
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "hidden" }))
+    {
+        @Html.AntiForgeryToken()
+    }
+
+    <ul class="nav navbar-nav">
+        <li>
+            <a href="/Home/Index" class="brand">
+                @*<img src="https://res.cloudinary.com/files-store/image/upload/v1539046345/NasihaUsers/logo.png" alt="@ViewsKeys.AppName" class="brandPicture" />*@
+                <img src="~/Content/images/logo.png" alt="@ViewsKeys.AppName" class="brandPicture" />
+            </a>
+        </li>
+        @if (User.IsInRole(RoleName.Admins))
+        {
+            <li><a href="/Admins/Index" title="@ViewsKeys.ControlPanel"><i class="fa fa-tachometer fa-fw fa-lg"></i></a></li>
+        }
+
+        <li><a href="/Advices/Index" title="@ViewsKeys.Advices"><i class="fa fa-envelope fa-fw fa-lg"></i></a></li>
+        <li><a href="/Manage/EditProfile" title="@ViewsKeys.Sittings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+        <li><a href="#" title="@ViewsKeys.Search" id="searchBtn"><i class="fa fa-search fa-fw fa-lg"></i></a></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()" title="@ViewsKeys.LogOff"><i class="fa fa-sign-out"></i></a></li>
+    </ul>
+
+    <form action="/Home/Search" method="get" class="navbar-form hideform" id="searchForm">
+        <div class="form-group">
+            <input type="text" name="q" class="form-control" id="searchQuery" placeholder="@ViewsKeys.Search">
+
+            <button type="button" id="searchButton" class="blockInXsmall">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </form>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink(ViewsKeys.About, "About", "Home")</li>
+        <li>@Html.ActionLink(ViewsKeys.Contact, "Contact", "Home")</li>
+
+        <li>@Html.ActionLink(ViewsKeys.Register, "Register", "Account", null, new { id = "registerLink" })</li>
+        <li>@Html.ActionLink(ViewsKeys.LogIn, "Login", "Account", null, new { id = "loginLink" })</li>
+    </ul>
+}

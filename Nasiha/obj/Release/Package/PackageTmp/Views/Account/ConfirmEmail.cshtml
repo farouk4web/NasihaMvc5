@@ -1,0 +1,17 @@
+﻿@using Nasiha.Resources
+
+@{
+    ViewBag.Title = ViewsKeys.ConfirmEmail;
+}
+<div class="confirmEmail text-center">
+    <div class="container">
+
+        <h2>@ViewBag.Title.</h2>
+        <i class="fa fa-ok-circle" style="font-size:100px;color:coral"></i>
+            <p class="lead">
+                @ViewsKeys.ConfirmEmailSuccessMsg 
+                @Html.ActionLink(ViewsKeys.ClickHereToLogin, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+            </p>
+
+    </div>
+</div>
