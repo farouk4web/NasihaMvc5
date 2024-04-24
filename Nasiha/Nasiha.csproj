@@ -181,6 +181,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\AdvicesController.cs" />
+    <Compile Include="Controllers\API\AdvicesController.cs" />
+    <Compile Include="DTOs\ActionDto.cs" />
+    <Compile Include="DTOs\AdviceDto.cs" />
+    <Compile Include="DTOs\UserDto.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
